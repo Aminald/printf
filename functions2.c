@@ -47,12 +47,13 @@ int print_pointer(va_list types, char buffer[],
 
 	ind++;
 
-	return (write_pointer(buffer, ind, length,
-		width, flags, padd, extra_c, 1));
+	return (write_pointer(buffer, ind,
+length, width, flags, padd, extra_c, 1));
 }
 
 /**
- * print_non_printable - Prints ASCII codes in hexadecimal of non-printable characters.
+ * print_non_printable - Prints ASCII codes in hexadecimal
+of non-printable characters.
  * @types: A va_list of arguments.
  * @buffer: Buffer array to handle print.
  * @flags: Calculates active flags.
@@ -127,6 +128,7 @@ int print_reverse(va_list types, char buffer[],
 		for (i = i - 1; i >= 0; i--)
 	{
 		char z = str[i];
+
 		write(1, &z, 1);
 		count++;
 	}

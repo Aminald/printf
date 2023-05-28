@@ -34,12 +34,14 @@ int _printf(const char *format, ...)
 			else if (format[i] == 'c')
 			{
 				char c = va_arg(args, int);
+
 				_putchar(c);
 				count++;
 			}
 			else if (format[i] == 's')
 			{
 				char *str = va_arg(args, char *);
+
 				if (str == NULL)
 					str = "(null)";
 				while (*str)
