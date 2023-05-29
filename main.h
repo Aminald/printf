@@ -19,6 +19,7 @@
 #define S_LONG (1 << 0)
 #define S_SHORT (1 << 1)
 
+
 /**
  * struct fmt - Struct op
  *
