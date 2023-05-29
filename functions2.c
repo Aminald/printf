@@ -53,7 +53,7 @@ length, width, flags, padd, extra_c, 1));
 
 /**
  * print_non_printable - Prints ASCII codes in hexadecimal
-of non-printable characters.
+ * of non-printable characters.
  * @types: A va_list of arguments.
  * @buffer: Buffer array to handle print.
  * @flags: Calculates active flags.
