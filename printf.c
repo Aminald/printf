@@ -73,27 +73,3 @@ void print_buffer(char buffer[], int *buff_ind)
 
 	*buff_ind = 0;
 }
-/**
- * print_integer - Prints an integer
- * @num: The number to print
- * Return: The number of characters printed
- */
-int print_integer(int num)
-{
-	int count = 0;
-
-	if (num < 0)
-	{
-		putchar('-');
-		count++;
-		num = -num;
-	}
-
-	if (num >= 10)
-		count += print_integer(num / 10);
-
-	putchar('0' + (num % 10));
-	count++;
-
-	return (count);
-}
