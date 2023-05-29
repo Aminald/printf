@@ -8,6 +8,8 @@
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
+int _printf(const char *format, ...);
+
 /* FLAGS */
 #define F_MINUS (1 << 0)
 #define F_PLUS (1 << 1)
