@@ -4,7 +4,7 @@
 /**
  * _printf - Produces output according to a format
  * @format: A character string containing directives
- *
+ * _putchar: putchar
  * Return: The number of characters printed (excluding the null byte)
  */
 int _printf(const char *format, ...)
@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
+			putchar(format[i]);
 			count++;
 		}
 		else
@@ -28,23 +28,25 @@ int _printf(const char *format, ...)
 				return (-1);
 			else if (format[i] == '%')
 			{
-				_putchar('%');
+				putchar('%');
 				count++;
 			}
 			else if (format[i] == 'c')
 			{
 				char c = va_arg(args, int);
-				_putchar(c);
+
+				putchar(c);
 				count++;
 			}
 			else if (format[i] == 's')
 			{
 				char *str = va_arg(args, char *);
+
 				if (str == NULL)
 					str = "(null)";
 				while (*str)
 				{
-					_putchar(*str);
+					putchar(*str);
 					count++;
 					str++;
 				}
