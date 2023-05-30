@@ -15,7 +15,7 @@
  * Return: The number of characters written
  */
 int write_unsgnd(int filedes, int nbytes, char *buf,
-int flags, int width, int precision, int size
+int flags, int width, int precision, int size)
 {
 UNUSED(flags);
 UNUSED(width);
