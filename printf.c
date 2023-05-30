@@ -8,6 +8,11 @@ void print_buffer(char buffer[], int *buff_ind);
 /**
  * _printf - Produces output according to a format
  * @format: A character string containing directives
+ * get_flags - Retrieves the flags from the format string
+ * get_width - Retrieves the width from the format string
+ * get_precision - Retrieves the precision from the format string
+ * get_size - Retrieves the size from the format string
+ * handle_print - Handles the conversion specifier and prints formatted output
  * Return: The number of characters printed (excluding the null byte)
  */
 int _printf(const char *format, ...)
