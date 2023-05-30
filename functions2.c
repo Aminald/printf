@@ -3,38 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/**
- * write_pointer - Writes a pointer value to the buffer
- * @buffer: Buffer array to handle print
- * @ind: Index in the buffer array
- * @length: Length of the pointer value
- * @width: Width specification
- * @flags: Flag options
- * @padd: Padding character
- * @extra_c: Extra character
- * @padd_start: Padding start position
- *
- * Return: Number of characters written
- */
-int write_pointer(char buffer[], int ind, int length,
-		int width, int flags, char padd, char extra_c, int padd_start)
-{
-    /* Implementation of the write_pointer function*/
-
-    /* Return the number of characters written*/
-UNUSED(flags);
-UNUSED(width);
-UNUSED(ind);
-UNUSED(length);
-UNUSED(buffer);
-UNUSED(padd_start);
-UNUSED(extra_c);
-UNUSED(padd);
-return (0);
-}
-
-
-/****************** PRINT POINTER ******************/
+/* PRINT POINTER */
 /**
  * print_pointer - Prints the value of a pointer variable
  * @types: List a of arguments

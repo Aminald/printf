@@ -1,29 +1,6 @@
 #include "main.h"
 #include <unistd.h> /* Include the necessary header for write() function */
 
-#define UNUSED(x) (void)(x) /* Macro to silence unused parameter warnings */
-
-/**
- * write_unsgnd - Writes a string to the standard output
- * @filedes: File descriptor (0 for standard output)
- * @nbytes: Number of bytes to write
- * @buf: Buffer containing the string to write
- * @flags: Integer value representing active formatting flags
- * @width: Integer value representing the width specification
- * @precision: Integer value representing the precision specification
- * @size: Integer value representing the size specifier
- * Return: The number of characters written
- */
-int write_unsgnd(int filedes, int nbytes, char *buf,
-int flags, int width, int precision, int size)
-{
-UNUSED(flags);
-UNUSED(width);
-UNUSED(precision);
-UNUSED(size);
-return (write(filedes, buf, nbytes));
-/* Use the write() function to write the buffer to the standard output */
-}
 
 /**
  * print_unsigned - Prints an unsigned number
