@@ -101,27 +101,8 @@ int print_octal(va_list types, char buffer[],
 	return (write_unsgnd(0, q, buffer, flags, width, precision, size));
 }
 
-
 /**
- * print_hexadecimal - Prints an unsigned number in hexadecimal format
- * @types: Variadic argument list containing the unsigned number to be printed
- * @buffer: Character array used as a buffer for printing
- * @flags: Integer value representing active formatting flags
- * @width: Integer value representing the width specification
- * @precision: Integer value representing the precision specification
- * @size: Integer value representing the size specifier
- * Return: The number of characters printed
- */
-int print_hexadecimal(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
-{
-	return (print_hexa(types, "0123456789abcdef", buffer,
-		flags, 'x', width, precision, size));
-}
-
-
-/**
- * print_hexa_upper - Prints an unsigned number in uppercase hexadecimal format
+ * print_hexa_upper - Prints an unsigned number in uppercase hexa format
  * @types: Variadic argument list containing the unsigned number to be printed
  * @buffer: Character array used as a buffer for printing
  * @flags: Integer value representing active formatting flags
@@ -136,7 +117,6 @@ int print_hexa_upper(va_list types, char buffer[],
 	return (print_hexa(types, "0123456789ABCDEF", buffer,
 		flags, 'X', width, precision, size));
 }
-
 
 /**
  * print_hexa - Prints a hexadecimal number in lower or upper case
@@ -153,6 +133,7 @@ int print_hexa_upper(va_list types, char buffer[],
  */
 int print_hexa(va_list types, char map_to[], char buffer[],
 	int flags, char flag_ch, int width, int precision, int size)
+
 {
 	int w = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
