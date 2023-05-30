@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>  
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
@@ -8,6 +8,11 @@ void print_buffer(char buffer[], int *buff_ind);
 /**
  * _printf - Produces output according to a format
  * @format: A character string containing directives
+ * get_flags - Retrieves the flags from the format string
+ * get_width - Retrieves the width from the format string
+ * get_precision - Retrieves the precision from the format string
+ * get_size - Retrieves the size from the format string
+ * handle_print - Handles the conversion specifier and prints formatted output
  * Return: The number of characters printed (excluding the null byte)
  */
 int _printf(const char *format, ...)
@@ -72,28 +77,4 @@ void print_buffer(char buffer[], int *buff_ind)
 	}
 
 	*buff_ind = 0;
-}
-/**
- * print_integer - Prints an integer
- * @num: The number to print
- * Return: The number of characters printed
- */
-int print_integer(int num)
-{
-	int count = 0;
-
-	if (num < 0)
-	{
-		putchar('-');
-		count++;
-		num = -num;
-	}
-
-	if (num >= 10)
-		count += print_integer(num / 10);
-
-	putchar('0' + (num % 10));
-	count++;
-
-	return (count);
 }

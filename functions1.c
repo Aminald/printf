@@ -15,13 +15,14 @@
  * Return: The number of characters written
  */
 int write_unsgnd(int filedes, int nbytes, char *buf,
-        int flags, int width, int precision, int size)
+int flags, int width, int precision, int size)
 {
-    UNUSED(flags);
-    UNUSED(width);
-    UNUSED(precision);
-    UNUSED(size);
-    return write(filedes, buf, nbytes); /* Use the write() function to write the buffer to the standard output */
+UNUSED(flags);
+UNUSED(width);
+UNUSED(precision);
+UNUSED(size);
+return (write(filedes, buf, nbytes));
+/* Use the write() function to write the buffer to the standard output */
 }
 
 
@@ -120,17 +121,6 @@ int print_hexadecimal(va_list types, char buffer[],
 
 
 /**
-<<<<<<< HEAD
- * print_hexa_upper - Prints an unsigned number in uppercase hexa notation
- * @types: The list of arguments
- * @buffer: Buffer array to handle print
- * @flags: Calculates active flags
- * @width: Width specifier
- * @precision: Precision specifier
- * @size: Size specifier
- *
- * Return: Number of characters printed
-=======
  * print_hexa_upper - Prints an unsigned number in uppercase hexadecimal format
  * @types: Variadic argument list containing the unsigned number to be printed
  * @buffer: Character array used as a buffer for printing
@@ -139,7 +129,6 @@ int print_hexadecimal(va_list types, char buffer[],
  * @precision: Integer value representing the precision specification
  * @size: Integer value representing the size specifier
  * Return: The number of characters printed
->>>>>>> 0d4e03b3016ff09d682b436e632f1c1b536bb3d7
  */
 int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
