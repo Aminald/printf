@@ -11,8 +11,8 @@ int get_flags(const char *format, int *x);
 int get_width(const char *format, int *x, va_list list);
 int get_precision(const char *format, int *x, va_list list);
 int get_size(const char *format, int *x);
-int handle_print(const char *format, int *x, va_list list, char buffer[], int flags, int width, int precision, int size);
 void print_buffer(char buffer[], int *buff_ind);
+
 
 /**
  * _printf - Produces output according to a format
@@ -72,6 +72,7 @@ int _printf(const char *format, ...)
 
 	return (printed_chars);
 }
+
 
 /**
  * print_buffer - Prints the contents of the buffer if it exists
