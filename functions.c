@@ -31,7 +31,8 @@ int print_char(va_list types, char buffer[],
  *
  * Description: This function handles the printing of a string. It takes in a
  * variadic argument list, processes any formatting options specified by the
- * flags, width, precision, and size parameters, and prints the resulting string
+ *
+ * flags, width, precision, size parameters, and prints the resulting string
  * to the buffer array.
  *
  * Return: The number of characters printed.
@@ -113,7 +114,7 @@ int print_percent(va_list types, char buffer[],
  * @width: Width specification
  * @precision: Precision specifier
  * @size: Size specification
- * 
+ *
  * Return: returns the number of characters printed
  */
 
