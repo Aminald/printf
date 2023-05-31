@@ -4,17 +4,17 @@
 #include <stdarg.h>
 #include <stddef.h>
 #define UNUSED(x) (void)(x)
-/************************* WRITE HANDLE *************************/
+/*handle_write_char */
 /**
-* handle_write_char - Prints a string
-* @c: char types.
-* @buffer: Buffer array to handle print
-* @flags:  Calculates active flags.
-* @width: get width.
-* @precision: precision specifier
-* @size: Size specifier
+* handle_write_char - Prints a character
+* @c: Character to be printed
+* @buffer: Character array used as a buffer for printing
+* @flags: Integer value representing active formatting flags
+* @width: Integer value representing the width specification 
+* @precision: Integer value representing the precision specifier
+* @size:  Integer value representing the size specifie
 *
-* Return: Number of chars printed.
+* Return: Returns the number of characters printed
 */
 int handle_write_char(char c, char buffer[],
 int flags, int width, int precision, int size)
