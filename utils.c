@@ -49,7 +49,7 @@ int is_digit(char c)
 }
 
 /**
- * convert_size_number - Performs a type conversion on a given number 
+ * convert_size_number - Performs a type conversion on a given number
  * @num: The number to be converted.
  * @size: Number specifier indicating the desired conversion
  *

@@ -10,7 +10,7 @@
 * @c: Character to be printed
 * @buffer: Character array used as a buffer for printing
 * @flags: Integer value representing active formatting flags
-* @width: Integer value representing the width specification 
+* @width: Integer value representing the width specification
 * @precision: Integer value representing the precision specifier
 * @size:  Integer value representing the size specifie
 *
