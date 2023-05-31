@@ -26,35 +26,53 @@ void print_buffer(char buffer[], int *buff_ind);
  */
 int _printf(const char *format, ...)
 {
-        va_list args;
-        int printed_chars = 0;
+	int x, printed = 0, printed_chars = 0;
+	int flags, width, precision, size, buff_ind = 0;
+	va_list list;
+	char buffer[BUFF_SIZE];
 
-        va_start(args, format);
+	if (format == NULL)
+		return (-1);
 
-        while (*format)
-        {
-                if (*format == '%')
-                {
-                        format++;
+	va_start(list, format);
 
-                        if (*format == 'd' || *format == 'i')
-                        {
-                                int num = va_arg(args, int);
-                                printed_chars += putchar(num);
-                        }
-                }
-                else
-                {
-                        printed_chars += putchar(*format);
-                }
+	for (x = 0; format && format[x] != '\0'; x++)
+	{
+		if (format[x] != '%')
+		{
+			buffer[buff_ind++] = format[x];
+			if (buff_ind == BUFF_SIZE)
+			{
+				print_buffer(buffer, &buff_ind);
+			}
+			printed_chars++;
+		}
+		else
+		{
+			print_buffer(buffer, &buff_ind);
+			flags = get_flags(format, &x);
+			width = get_width(format, &x, list);
+			precision = get_precision(format, &x, list);
+			size = get_size(format, &x);
+			++x;
+			printed = handle_print(format, &x, list, buffer,
+				flags, width, precision, size);
+			if (printed == -1)
+			{
+				va_end(list);
+				return (-1);
+			}
+			printed_chars += printed;
+		}
+	}
 
-                format++;
-        }
+	print_buffer(buffer, &buff_ind);
 
-        va_end(args);
+	va_end(list);
 
-        return printed_chars;
+	return (printed_chars);
 }
+
 
 /**
  * print_buffer - Prints the contents of the buffer if it exists
